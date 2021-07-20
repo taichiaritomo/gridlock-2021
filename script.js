@@ -92,7 +92,7 @@ function renderVideoStatic() {
                 imgData.data[i] = pink_R;
                 imgData.data[i+1] = pink_G;
                 imgData.data[i+2] = pink_B;
-                imgData.data[i+3] = 128;
+                imgData.data[i+3] = 192;
             } else {
                 // imgData.data[i] = base_R;
                 // imgData.data[i+1] = base_G;

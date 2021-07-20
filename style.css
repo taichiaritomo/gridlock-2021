@@ -38,17 +38,25 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
+.compress {
+  letter-spacing: -3px;
+}
+
 html {
   width: 100%;
   height: 100%;
 }
+html ::selection {
+  background: #4100FF;
+}
 
 body {
   margin: 0;
+  margin-top: 48px;
   background: #1D1C1D;
   color: #E84A67;
   text-shadow: 0 1px #4100FF;
-  font-family: "Futura-Triplex";
+  font-family: "Futura-Duplex";
   font-size: 22px;
   min-height: 100%;
   line-height: 1.5;
@@ -59,17 +67,49 @@ body {
   }
 }
 
+header {
+  text-align: center;
+  color: transparent;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media only screen and (max-width: 960px) {
+  header {
+    padding-top: 12px;
+  }
+}
+header h1 {
+  position: relative;
+  width: 148px;
+  height: 16px;
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 540px) {
+  header h1 {
+    transform: scale(0.9);
+  }
+}
+header h1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .video-section {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 48px;
   padding-left: 48px;
   padding-right: 48px;
 }
 @media only screen and (max-width: 960px) {
   .video-section {
-    padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -123,24 +163,22 @@ iframe, embed {
 }
 
 .artist-info {
-  margin: 0.5em auto 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 1080px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 0.5em;
+  margin-top: 2em;
 }
 
 .artist-info_column {
-  flex: 1 1 540px;
+  flex: 0 1 540px;
   margin-top: 48px;
-  margin-bottom: 48px;
 }
 @media only screen and (max-width: 960px) {
   .artist-info_column {
     margin-top: 30px;
-    margin-bottom: 30px;
   }
 }
 
@@ -157,6 +195,7 @@ iframe, embed {
 
 .artist-info_links {
   font-size: 18px;
+  margin-left: -2.2em;
   padding-right: 48px;
   padding-left: 48px;
   padding-top: 6px;
@@ -166,7 +205,12 @@ iframe, embed {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 0;
-    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .artist-info_links {
+    font-size: 14px;
+    margin-left: -1.2em;
   }
 }
 .artist-info_links .links {
@@ -176,7 +220,7 @@ iframe, embed {
   flex: 1 0 50%;
 }
 .artist-info_links address {
-  margin-left: 1.4em;
+  margin-left: 1.2em;
   font-style: normal;
 }
 
@@ -192,8 +236,12 @@ a.link:hover {
   color: white;
 }
 
+.arrow {
+  font-size: 0.75em;
+}
+
 .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(4, start) infinite;
 }
 
 @keyframes blink-animation {
@@ -207,6 +255,22 @@ a.link:hover {
   z-index: -1;
   top: -200vh;
   left: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media only screen and (max-width: 540px) {
+  footer {
+    transform: scale(0.9);
+  }
+}
+footer .logo {
+  width: 24px;
+  height: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
