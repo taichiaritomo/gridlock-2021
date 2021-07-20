@@ -39,7 +39,7 @@ button::-moz-focus-inner {
 }
 
 .compress {
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 }
 
 html {
@@ -195,7 +195,7 @@ iframe, embed {
 
 .artist-info_links {
   font-size: 18px;
-  margin-left: -2.2em;
+  margin-left: -1.7em;
   padding-right: 48px;
   padding-left: 48px;
   padding-top: 6px;
@@ -210,7 +210,7 @@ iframe, embed {
 @media only screen and (max-width: 540px) {
   .artist-info_links {
     font-size: 14px;
-    margin-left: -1.2em;
+    margin-left: -1.3em;
   }
 }
 .artist-info_links .links {
@@ -220,7 +220,7 @@ iframe, embed {
   flex: 1 0 50%;
 }
 .artist-info_links address {
-  margin-left: 1.2em;
+  margin-left: 0.85em;
   font-style: normal;
 }
 
@@ -237,7 +237,8 @@ a.link:hover {
 }
 
 .arrow {
-  font-size: 0.75em;
+  font-family: monospace;
+  font-size: 0.8em;
 }
 
 .blink {
