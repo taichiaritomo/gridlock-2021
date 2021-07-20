@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Futura-Duplex";
+  font-weight: 600;
+  src: url("Hershey-Noailles-Futura-Duplex-Bold.ttf");
+}
+@font-face {
+  font-family: "Futura-Duplex";
+  font-weight: 400;
+  src: url("Hershey-Noailles-Futura-Duplex-Regular.otf");
+}
+@font-face {
+  font-family: "Futura-Triplex";
+  font-weight: 400;
+  src: url("Hershey-Noailles-Futura-Triplex-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  text-align: inherit;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #1D1C1D;
+  color: #E84A67;
+  text-shadow: 0 1px #4100FF;
+  font-family: "Futura-Triplex";
+  font-size: 22px;
+  min-height: 100%;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 540px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.video-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+@media only screen and (max-width: 960px) {
+  .video-section {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 640/267;
+}
+
+#video-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+  background: #1D1C1D;
+  transition: opacity 1s linear;
+}
+
+.play-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+iframe, embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#background-canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+.artist-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+
+.artist-info_column {
+  flex: 0 1 480px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+@media only screen and (max-width: 960px) {
+  .artist-info_column {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.artist-info_bio {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+@media only screen and (max-width: 960px) {
+  .artist-info_bio {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.artist-info_links {
+  font-size: 18px;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 6px;
+}
+@media only screen and (max-width: 960px) {
+  .artist-info_links {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+.artist-info_links .links {
+  display: flex;
+}
+.artist-info_links .links .links-list {
+  flex: 1 0 50%;
+}
+.artist-info_links address {
+  margin-left: 1.4em;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+}
+
+a.link {
+  color: inherit;
+  text-decoration: none;
+}
+a.link:hover {
+  color: white;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+#map-canvas {
+  background: white;
+  position: fixed;
+  z-index: -1;
+  top: -200vh;
+  left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
