@@ -71,6 +71,7 @@ body
 .video-container
     position: relative
     width: 100%
+    max-width: 1280px
     aspect-ratio: 640 / 267
 #video-canvas
     position: absolute
@@ -107,14 +108,16 @@ iframe, embed
     width: 100%
     height: 100vh
 .artist-info
+    margin: 0.5em auto 0
     width: 100%
+    max-width: 1080px
     display: flex
     justify-content: center
     flex-wrap: wrap
     margin-top: 0.5em
     // padding: $spacing-S
 .artist-info_column
-    flex: 0 1 480px
+    flex: 1 1 540px
     margin-top: $spacing-S
     margin-bottom: $spacing-S
     @media only screen and (max-width: $breakpoint)
