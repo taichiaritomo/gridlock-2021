@@ -17,7 +17,7 @@ $pink: #E84A67
 $spacing-S: 48px
 $spacing-XS: 30px
 $breakpoint: 960px
-$breakpoint-S: 540px
+$breakpoint-S: $breakpoint / 2
 
 *
     box-sizing: border-box
@@ -51,9 +51,7 @@ html
         background: $blue
 body
     margin: 0
-    margin-top: $spacing-S
     background: $base
-    // background: black
     color: $pink
     text-shadow: 0 1px $blue
     font-family: 'Futura-Duplex'
@@ -63,19 +61,16 @@ body
     @media only screen and (max-width: $breakpoint-S)
         font-size: 18px
 header
-    // left: 100%
-    // top: $spacing-S
     text-align: center
     color: transparent
     font-size: 1px
-    // width: 100%
     display: flex
     justify-content: center
     align-items: center
-    padding-top: 24px
-    padding-bottom: 24px
+    margin-top: 1.5 * $spacing-S
+    margin-bottom: 0.5 * $spacing-S
     @media only screen and (max-width: $breakpoint)
-        padding-top: 12px
+        margin-top: 1.25 * $spacing-S
     h1
         position: relative
         width: 148px
@@ -145,10 +140,8 @@ iframe, embed
     display: flex
     justify-content: center
     flex-wrap: wrap
-    margin-top: 2em
-    // padding: $spacing-S
 .artist-info_column
-    flex: 0 1 540px
+    flex: 0 1 $breakpoint / 2
     margin-top: $spacing-S
     // margin-bottom: $spacing-S
     @media only screen and (max-width: $breakpoint)
@@ -156,13 +149,15 @@ iframe, embed
         // margin-bottom: $spacing-XS
 .artist-info_bio
     padding-left: $spacing-S
-    padding-right: $spacing-S
+    padding-right: 0
     @media only screen and (max-width: $breakpoint)
+        padding-left: $spacing-XS
+        padding-right: $spacing-XS / 2
+    @media only screen and (max-width: $breakpoint-S)
         padding-left: $spacing-XS
         padding-right: $spacing-XS
 .artist-info_links
     font-size: 18px
-    margin-left: -1.7em
     padding-right: $spacing-S
     padding-left: $spacing-S
     padding-top: 6px
@@ -172,13 +167,14 @@ iframe, embed
         padding-top: 0
     @media only screen and (max-width: $breakpoint-S)
         font-size: 14px
-        margin-left: -1.3em
     .links
         display: flex
+        margin-left: -16px
+        @media only screen and (max-width: $breakpoint-S)
+            margin-left: -12px
         .links-list
             flex: 1 0 50%
     address
-        margin-left: 0.85em
         font-style: normal
 p
     margin: 0
@@ -209,8 +205,10 @@ a.link
 footer
     display: flex
     justify-content: center
-    padding-top: $spacing-S
-    padding-bottom: $spacing-S
+    padding-bottom: 0.5 * $spacing-S
+    padding-top: 1.5 * $spacing-S
+    @media only screen and (max-width: $breakpoint)
+        padding-top: 1.25 * $spacing-S
     @media only screen and (max-width: $breakpoint-S)
         transform: scale(0.9)
     .logo

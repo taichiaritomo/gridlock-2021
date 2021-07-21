@@ -52,7 +52,6 @@ html ::selection {
 
 body {
   margin: 0;
-  margin-top: 48px;
   background: #1D1C1D;
   color: #E84A67;
   text-shadow: 0 1px #4100FF;
@@ -61,7 +60,7 @@ body {
   min-height: 100%;
   line-height: 1.5;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 480px) {
   body {
     font-size: 18px;
   }
@@ -74,12 +73,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  margin-top: 72px;
+  margin-bottom: 24px;
 }
 @media only screen and (max-width: 960px) {
   header {
-    padding-top: 12px;
+    margin-top: 60px;
   }
 }
 header h1 {
@@ -88,7 +87,7 @@ header h1 {
   height: 16px;
   transform: scale(1.2);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 480px) {
   header h1 {
     transform: scale(0.9);
   }
@@ -169,11 +168,10 @@ iframe, embed {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2em;
 }
 
 .artist-info_column {
-  flex: 0 1 540px;
+  flex: 0 1 480px;
   margin-top: 48px;
 }
 @media only screen and (max-width: 960px) {
@@ -184,9 +182,15 @@ iframe, embed {
 
 .artist-info_bio {
   padding-left: 48px;
-  padding-right: 48px;
+  padding-right: 0;
 }
 @media only screen and (max-width: 960px) {
+  .artist-info_bio {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
   .artist-info_bio {
     padding-left: 30px;
     padding-right: 30px;
@@ -195,7 +199,6 @@ iframe, embed {
 
 .artist-info_links {
   font-size: 18px;
-  margin-left: -1.7em;
   padding-right: 48px;
   padding-left: 48px;
   padding-top: 6px;
@@ -207,20 +210,24 @@ iframe, embed {
     padding-top: 0;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 480px) {
   .artist-info_links {
     font-size: 14px;
-    margin-left: -1.3em;
   }
 }
 .artist-info_links .links {
   display: flex;
+  margin-left: -16px;
+}
+@media only screen and (max-width: 480px) {
+  .artist-info_links .links {
+    margin-left: -12px;
+  }
 }
 .artist-info_links .links .links-list {
   flex: 1 0 50%;
 }
 .artist-info_links address {
-  margin-left: 0.85em;
   font-style: normal;
 }
 
@@ -261,10 +268,15 @@ a.link:hover {
 footer {
   display: flex;
   justify-content: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
+  padding-top: 72px;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 960px) {
+  footer {
+    padding-top: 60px;
+  }
+}
+@media only screen and (max-width: 480px) {
   footer {
     transform: scale(0.9);
   }
