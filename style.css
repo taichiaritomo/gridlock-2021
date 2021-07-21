@@ -48,6 +48,7 @@ html {
 }
 html ::selection {
   background: #4100FF;
+  text-shadow: 0 1px blue;
 }
 
 body {
