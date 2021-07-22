@@ -58,7 +58,7 @@ body
     font-family: 'Futura-Duplex'
     font-size: 22px
     min-height: 100%
-    line-height: 1.5
+    line-height: 1.33
     @media only screen and (max-width: $breakpoint-S)
         font-size: 18px
 header
@@ -122,6 +122,7 @@ header
     justify-content: center
     align-items: center
     color: white
+    text-shadow: 0 1px $blue
     cursor: pointer
     // background: $base
 iframe, embed
@@ -157,6 +158,8 @@ iframe, embed
     @media only screen and (max-width: $breakpoint-S)
         padding-left: $spacing-XS
         padding-right: $spacing-XS
+        text-align: justify
+        text-justify: inter-word
 .artist-info_links
     font-size: 18px
     padding-right: $spacing-S

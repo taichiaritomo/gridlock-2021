@@ -12,7 +12,7 @@ function onYouTubeIframeAPIReady() {
 player = new YT.Player('player', {
     height: '267',
     width: '640',
-    videoId: 'NIJmSun-6gA',
+    videoId: 'b7JuiQ1XIHw',
     playerVars: {
     'playsinline': 0,
     'listType':'user_uploads',
